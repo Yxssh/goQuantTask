@@ -1,0 +1,32 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "Build GoQuantTask",
+			"command": "C:/msys64/ucrt64/bin/g++.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${workspaceFolder}/main.cpp",
+				"-o",
+				"${workspaceFolder}/output/main.exe",
+				"-I${workspaceFolder}",         // ✅ For json.hpp
+				"-I${workspaceFolder}/nlohmann", // ✅ For json.hpp
+				"-I${workspaceFolder}/include",  // ✅ For curl/curl.h
+				"-L${workspaceFolder}/lib",
+				"-lcurl",
+				"-lssl",
+				"-lcrypto",
+				"-lws2_32",
+				"-std=c++17"
+			],
+			"options": {
+				"cwd": "C:/msys64/ucrt64/bin"
+			},
+			"problemMatcher": ["$gcc"],
+			"group": { "kind": "build", "isDefault": true },
+			"detail": "compiler: C:/msys64/ucrt64/bin/g++.exe"
+		}
+	]
+}
