@@ -739,7 +739,6 @@ void mainMenu() {
     std::string instrument;
     double amount, price;
     std::string orderType;
-    // DeribitWebSocket ws; 
     bool running1 = true;
 
     while (running1) {
